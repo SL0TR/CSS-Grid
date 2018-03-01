@@ -7,13 +7,28 @@
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
-    <p>What's Up</p>
-    
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
   </body>
 </html>
 
 <style>
-  p {
-    color: var(--black);
+  .container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 200px 400px;
+  }
+
+  .item {
+    background: var(--yellow);
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: .2em;
   }
 </style>
+
