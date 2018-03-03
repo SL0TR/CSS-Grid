@@ -8,19 +8,36 @@
   </head>
   <body>
     <div class="container">
-      <div class="item sidebar-1">
-        <p>I'm Sidebar #1</p>
-      </div>
-      <div class="item content">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti consequuntur voluptatum cumque ipsam obcaecati porro reprehenderit vel, magnam laborum explicabo et illo optio dolore facere voluptates consectetur quod doloribus? Iste?</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A animi quisquam in vero consectetur consequuntur nemo veritatis molestiae voluptate nobis voluptatum iure, ut pariatur atque iusto exercitationem quo amet temporibus?</p>
-      </div>
-      <div class="item sidebar-2">
-        <p>I'm The Sidebar #2</p>
-      </div>
-      <div class="item footer">
-        <p>I'm the footer</p>
-      </div>
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+      <div class="item item7">7</div>
+      <div class="item item8">8</div>
+      <div class="item item9">9</div>
+      <div class="item item10">10</div>
+      <div class="item item11">11</div>
+      <div class="item item12">12</div>
+      <div class="item item13">13</div>
+      <div class="item item14">14</div>
+      <div class="item item15">15</div>
+      <div class="item item16">16</div>
+      <div class="item item17">17</div>
+      <div class="item item18">18</div>
+      <div class="item item19">19</div>
+      <div class="item item20">20</div>
+      <div class="item item21">21</div>
+      <div class="item item22">22</div>
+      <div class="item item23">23</div>
+      <div class="item item24">24</div>
+      <div class="item item25">25</div>
+      <div class="item item26">26</div>
+      <div class="item item27">27</div>
+      <div class="item item28">28</div>
+      <div class="item item29">29</div>
+      <div class="item item30">30</div>
     </div>
   </body>
 </html>
@@ -29,12 +46,8 @@
   .container {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 150px 150px 100px;
-    grid-template-areas: 
-    "sidebar-1  content sidebar-2"
-    "sidebar-1  content sidebar-2"
-    "footer     footer  footer"
+    grid-template-columns: [site-left] 1fr [content-start] 500px [content-end] 1fr [site-right];
+    grid-template-rows: [content-top] repeat(10, auto) [content-bottom];
   }
 
   .item {
@@ -45,29 +58,10 @@
     border-radius: .2em;
   }
 
-  .footer {
-    grid-area: footer;
-  }
-
-  .content {
-    grid-area: content;
-  }
-
-  .sidebar-1 {
-    grid-area: sidebar-1;
-  }
-
-  .sidebar-2 {
-    grid-area: sidebar-2;
-  }
-
-  @media (max-width: 700px) {
-    .container {
-      grid-template-areas: 
-        "content  content content"
-        "sidebar-1  sidebar-1 sidebar-2"
-        "footer    footer  footer"
-    }
+  .item3 {
+    background: slateblue;
+    grid-column: content-start;
+    grid-row: content-top / content-bottom;
   }
 
 </style>
